@@ -1,38 +1,92 @@
 .App {
-  text-align: center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchBox {
+    padding: 10px 10px 10px 50px;
+    margin: 5px;
+    width: 88%;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #9f9b9b;
+
+    /* png's bg would be transparent */
+    background-image: url("https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png");
+    background-size: 25px 25px;
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flex {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.listItemOuter {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #efebeb;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listItemOuter:after {
+    content: ">";
+    position: relative;
+    right: 0;
+    top: 20px;
+    color: #c0b9b9;
+}
+
+.listItem {
+    padding: 18px 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.listItem .logo {
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #efefef;
+    width: 25px;
+    height: 25px;
+}
+
+.listItem .name {
+    font-weight: bolder;
+}
+
+.listItem .companyName {
+    color: #9d9797;
+    font-size: 13px;
+}
+
+.listItem .money {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem .money .price {
+    font-weight: bolder;
+    text-align: right;
+}
+
+.listItem .money .delta {
+    display: flex;
+    font-size: 13px;
+}
+
+.listItem .money .delta .val {
+    margin-right: 4px;
+}
+
+.listItem .money .delta .perc {
+
 }
